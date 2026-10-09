@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: montour
+  # PostgreSQL installé sur le PC (pas de Docker) : l'utilisateur et le mot de passe
+  # sont dans secrets.properties, un fichier qui ne part jamais sur GitHub.
+  config:
+    import: optional:file:./secrets.properties
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/montour}
+    username: ${DATABASE_USER:montour}
+    password: ${DATABASE_PASSWORD:montour}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+montour:
+  frontend-url: ${FRONTEND_URL:http://localhost:5173}
+  jwt:
+    secret: ${JWT_SECRET:bW9udG91ci1jbGUtc2VjcmV0ZS1kZS1kZXZlbG9wcGVtZW50LWEtY2hhbmdlci1lbi1wcm9kdWN0aW9u}
+    expiration-minutes: 480
+  demo:
+    mot-de-passe: ${DEMO_PASSWORD:MonTour2026!}

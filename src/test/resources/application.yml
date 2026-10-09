@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:montour;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+    password:
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+montour:
+  frontend-url: http://localhost:5173
+  jwt:
+    secret: bW9udG91ci1jbGUtc2VjcmV0ZS1kZS1kZXZlbG9wcGVtZW50LWEtY2hhbmdlci1lbi1wcm9kdWN0aW9u
+    expiration-minutes: 60
+  demo:
+    mot-de-passe: MonTour2026!
