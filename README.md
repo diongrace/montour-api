@@ -1,5 +1,7 @@
 # MonTour API — File d'attente virtuelle en temps réel
 
+[![CI](https://github.com/diongrace/montour-api/actions/workflows/ci.yml/badge.svg)](https://github.com/diongrace/montour-api/actions/workflows/ci.yml)
+
 Backend de MonTour : on scanne un QR code, on reçoit un ticket sur son téléphone et on suit son tour en direct.
 
 **Frontend** : https://github.com/diongrace/montour-web
